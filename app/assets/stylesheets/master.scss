@@ -26,6 +26,7 @@
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .frosty {
@@ -47,4 +48,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
