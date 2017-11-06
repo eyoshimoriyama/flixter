@@ -7,7 +7,9 @@
   <% @courses.each do |course| %>
     <h2 class="text-center">
       <%= link_to course.title, course_path(course) %>
+    <div class="row-fluid">
       <%= image_tag course.image, class: 'img-fluid' %>
+    </div>
     </h2>
     <br />
     <div class="row">
