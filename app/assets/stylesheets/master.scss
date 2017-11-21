@@ -15,12 +15,14 @@
 }
 
 .hero {
+  display: flex;
+  align-items: center; 
   background: image_url('hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 370px;
+  height: 330px;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
@@ -149,4 +151,21 @@ ul .header .fa {
 
 .lesson li p {
   margin: 0;
+}
+
+.btn-success {
+  background-color: #bd4043;
+  border: none;
+}
+
+.btn-success:hover {
+  color: white;
+  background-color: #923d3f;
+}
+
+.btn-success:focus, 
+.btn-success:active {
+  border-color: none;
+  outline: none important;
+  box-shadow: none;
 }
