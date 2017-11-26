@@ -33,16 +33,14 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
-  <%= image_tag current_course.image, class: 'img-fluid' %>
-  <br />
-  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
-  <br class="clr" />
-  
-  <div class="text-center">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">Add a new section
-    </button>
+  <div class="row-fluid" >
+    <%= image_tag current_course.image, class: 'img-fluid' %>
   </div>
+    <br />
+  <div class="row-fluid" >
+    <%= link_to 'Preview As Student', course_path(current_course), class: 'btn btn-warning add-buttons' %>
+  </div>
+  <br class="clr" />
 
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
@@ -51,22 +49,17 @@
           <span class="fa fa-ellipsis-v"></span>
           <%= section.title %>
         </div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">New Lesson...
-        </button>
 
-        <br class="clr" />
         <br class="clr" />
 
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-              <div class="row">
-                <div class="col-1">
-                  <br />
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>">            
+              <div class="row vertical-align">
+                <div class="col-1 text-center">
                   <span class="fa fa-ellipsis-v"></span>
                 </div>
-                <div class="col-11 text-center">
+                <div class="col-10 text-center">
                   <p>
                     <b><%= lesson.title %></b>
                   </p>
@@ -75,14 +68,28 @@
                   </p>
                 </div>
               </div>
-              <br class="clr">
+              <br class="clr" />
             </li>          
           <% end %>
         </ul>
+
+        <div class='lesson-button-div'>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg float-left add-buttons" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">New Lesson
+          </button>
+        </div>
+
         <br class="clr" />
     </li>
     <% end %>
   </ul>
+
+    <!-- Button trigger modal -->
+  <div class='section-button-div'>
+    <button type="button" class="btn btn-primary btn-lg add-buttons section-button" data-toggle="modal" data-target="#newSectionModal">New Section
+    </button>
+  </div>
+
 </div>
 
 
@@ -94,7 +101,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title" id="newSectionModalLabel">Add a new section</h4>
+        <h4 class="modal-title" id="newSectionModalLabel">Add Section
       </div>
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
         <div class="modal-body">
@@ -118,7 +125,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title" id="newLessonModeLabel">Add a new lesson</h4>
+        <h4 class="modal-title" id="newLessonModeLabel">Add a New Lesson</h4>
       </div>
       <%= simple_form_for @lesson, url: '#', html: {id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
@@ -128,7 +135,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a lesson", class: 'btn btn-primary' %>
+          <%= f.submit "Add Lesson", class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>

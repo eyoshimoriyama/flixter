@@ -1,11 +1,16 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 .navbar {
   color: white;
   font-family: Futura;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.bio-pic {
+  max-width: 100%
 }
 
 .navbar-inverse .navbar-brand {
@@ -28,7 +33,7 @@
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .frosty {
@@ -37,13 +42,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .frosty h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
@@ -56,6 +61,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 55px;
 }
 
 .booyah-box {
@@ -95,14 +101,13 @@ text-align: center;
 .lesson {
   background-color: black;
   margin-top: 10px;
-  height: 130px;
+  height: 120px;
 }
 
 .lesson a {
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 100;
-  font-size: 15px;
 }
 
 .lesson a b {
@@ -118,17 +123,26 @@ text-align: center;
 
 ul {
   list-style-type: none;
+  -webkit-padding-end: 5px;
+  -webkit-padding-start: 5px;
+}
+
+@media (min-width: 768px) {
+  ul {
+  -webkit-padding-end: 60px;
+  -webkit-padding-start: 60px;
+  }
 }
 
 .section-li {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  padding: 20px;
+  padding: 10px;
   margin: 20px;
 }
 
 ul .header {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 ul .header .fa {
@@ -139,33 +153,128 @@ ul .header .fa {
   background: black;
   color: white;
   margin: 10px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 100;
-  padding: 8px;
+  padding: 5px;
+  font-size: 30px;
 }
 
 .lesson li b {
   font-size: 25px;
-  font-weight: 100px;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
 }
 
 .lesson li p {
   margin: 0;
 }
 
-.btn-success {
+.btn-success,
+.btn-primary {
   background-color: #bd4043;
   border: none;
 }
 
-.btn-success:hover {
+.btn-success:hover,
+.btn-primary:hover {
   color: white;
   background-color: #923d3f;
 }
 
 .btn-success:focus, 
-.btn-success:active {
+.btn-success:active,
+.btn-primary:focus, 
+.btn-primary:active {
+  color: white;
   border-color: none;
-  outline: none important;
+  outline: none;
   box-shadow: none;
+}
+
+.course-description-row {
+  align-items: center;
+}
+
+.course-description {
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .course-description {
+    padding-bottom: 0px;
+    padding-left: 40px;
+  }
+}
+
+.more-details {
+  paddin-left: 0px;
+}
+
+@media (min-width: 768px) {
+  .more-details {
+    padding-left: 50px;
+  }
+}
+
+.course-title,
+.course-title:hover,
+.course-title:active,
+.course-title:focus {
+  color: black;
+}
+
+.lesson-button-div {
+  padding-left: 5px;
+}
+
+@media (min-width: 768px) {
+.lesson-button-div {
+  padding-left: 60px;
+  }
+}
+
+.section-button-div {
+  padding-left: 14px;
+}
+
+@media (min-width: 768px) {
+  .section-button-div {
+  padding-left: 68px;
+  }
+}
+.admin-button-div {
+  padding-left: 5px;
+}
+
+.add-buttons {
+  color: white;
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 20;
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.badge-default {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.text-center {
+  font-color: black;
+}
+
+.team-bio {
+  padding-top: 30px;
+}
+
+.team-page {
+  padding-bottom: 50px
 }
