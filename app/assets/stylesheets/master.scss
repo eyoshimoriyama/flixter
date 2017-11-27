@@ -288,3 +288,13 @@ ul .header .fa {
 .course-description {
   margin-top: 10px;
 }
+
+.vjs-default-skin.vjs-paused .vjs-big-play-button
+{
+display: none;
+}
+
+.vjs-default-skin.vjs-paused .vjs-control-bar
+{
+display: block;
+}

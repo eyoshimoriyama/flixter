@@ -8,12 +8,13 @@
   <br />
   <div class="row">
     <div class="col-12 text-center">
+      <% if current_user and  not current_user.enrolled_in?(@course) %>
         <span class="badge badge-default">
           <%= number_to_currency @course.cost %>
         </span>
-
-      <br />
-      <br />
+        <br />
+        <br />
+      <% end %>
 
       <% if current_user %>
         <% if current_user.enrolled_in?(@course) %>
@@ -33,7 +34,7 @@
           <% end %>
         <% end %>
       <% else %>
-        <h3 class="badge badge-info">Sign In to Enroll!</h3>
+        <h3 class="badge badge-info add-buttons">Sign In to Enroll!</h3>
       <% end %>
     </div>
 
