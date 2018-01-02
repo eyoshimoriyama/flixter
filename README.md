@@ -1,24 +1,22 @@
-# README
+# Flixter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flixter is a Ruby on Rails *Udemy* clone web application. Users can sign up, enroll in a free or paid course, and create their own course and lessons in the role of an instructor.
 
-Things you may want to cover:
+Check out the [flixter app](https://flixter-yoshi.herokuapp.com/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+____
+### Implementation Details:
+* Built on Ruby on Rails framework
+* PostgreSQL database
+* Twitter Bootstrap 3 for CSS and UI components
+* Simple Form gem for form implementation
+* Modal form course/lesson submission
+* Validation of form inputs
+* Devise gem for user authentication
+* CarrierWave gem for image and video uploading & Amazon Web Services (S3) for photo/video storage
+* MiniMagick for image resizing on upload
+* VideoJS for video embedding
+* Stripe for payment processing
+* jQuery for drag and drop reordering of courses and lessons
+* User dashboard to list courses enrolled in and managing as an instructor
+* Responsive design
